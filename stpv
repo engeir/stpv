@@ -173,6 +173,11 @@ handle_extension() {
                     && rm -f "$TMP_FILE_PATH" \
                     && return 0
             };;
+
+        # NetCDF
+        nc)
+            ncdump-rich -s -i "${FILE_PATH}" && return 0
+            return 1;;
     esac
     return 1
 }
