@@ -176,7 +176,7 @@ handle_extension() {
 
         # NetCDF
         nc)
-            ncdump-rich -s -i "${FILE_PATH}" && return 0
+            ncdump-rich "${FILE_PATH}" && return 0
             return 1;;
     esac
     return 1
